@@ -28,6 +28,16 @@ Controller :
 			<c:collection2></c:collection2>
 		</aura:application>
 
+#feature 203 adding some additional feature in it
+<aura:attribute name="name" type="string"  required="true"/>
+    			<aura:attribute name="exp"  type="Decimal"  />
+   			 <aura:attribute name="City" type="String" default="Hyd" />
+    			<div>
+        				Employee Name : {! v.name} <br/>
+        				Employee Exp  : {! v.exp} <br/>
+       				Employee City :{! v.city}
+    			</div>
+		</aura:component>
 
 
 Application :
