@@ -1,0 +1,22 @@
+
+<aura:component >
+	<ui:inputText label="Name" aura:id="name" placeholder="First, Last"/>
+	<ui:button aura:id="outputButton" label="Submit" press="{!c.getInput}"/>
+    <ui:outputText aura:id="nameOutput" value=""/>
+</aura:component>
+
+Controller :
+
+({
+	getInput : function(cmp, event) {
+      		var fullName = cmp.find("name").get("v.value");
+      		var outName = cmp.find("nameOutput");
+      		outName.set("v.value", fullName);
+    	}
+})
+
+Application :
+
+<aura:application >
+	<c:comp5></c:comp5>
+</aura:application>
