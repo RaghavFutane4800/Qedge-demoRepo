@@ -14,6 +14,21 @@ Controller :
       		outName.set("v.value", fullName);
     	}
 })
+#Feature 201 adding some changes 
+1. create custom component : collection2.cmp
+		<aura:component >
+   			<aura:attribute name="names" type="string[]" default="['Ram','Ravi','Kiran']" />
+   			<aura:iteration items="{!v.names}" var="s">
+      				<h1> Employee Name :{!s} </h1>
+    			</aura:iteration>
+		</aura:component>
+
+# Feature 202 branch adding new feature in items
+<aura:application >
+			<c:collection2></c:collection2>
+		</aura:application>
+
+
 
 Application :
 
